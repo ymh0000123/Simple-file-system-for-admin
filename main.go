@@ -42,6 +42,8 @@ var (
 	mutex         sync.Mutex
 )
 
+const configFilePath = "config.yaml"
+
 func main() {
 	// 设置日志文件
 	logFile, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
@@ -53,6 +55,15 @@ func main() {
 	// 设置日志格式
 	log.SetOutput(logFile)
 	log.SetFlags(log.Ldate | log.Ltime)
+
+	// 检查配置文件是否存在，如果不存在则创建并写入默认配置
+	if !fileExists(configFilePath) {
+		err := createDefaultConfig()
+		if err != nil {
+			log.Fatal("无法创建默认配置文件:", err)
+		}
+		log.Println("已创建默认配置文件")
+	}
 
 	// 读取配置文件
 	configData, err := ioutil.ReadFile("config.yaml")
@@ -99,7 +110,7 @@ func main() {
 						<button type="submit" class="btn btn-primary">上传</button>
 					</form>
 					<br>
-					<a href="/list" class="btn btn-secondary">文件列表</a><a href="/admin" class="btn btn-primary">管理员界面</a>
+					<a href="/list" class="btn btn-secondary">文件列表</a>  <a href="/admin" class="btn btn-primary">管理员界面</a>
 				</div>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
 			</body>
@@ -422,6 +433,31 @@ func deleteFile(name string) error {
 	err := os.Remove(filePath)
 	if err != nil {
 		log.Println("无法删除文件:", err)
+		return err
+	}
+
+	return nil
+}
+
+func fileExists(filename string) bool {
+	_, err := os.Stat(filename)
+	return err == nil
+}
+
+func createDefaultConfig() error {
+	defaultConfig := Config{
+		Port:     8080,
+		Username: "admin",
+		Password: "123456",
+	}
+
+	configData, err := yaml.Marshal(&defaultConfig)
+	if err != nil {
+		return err
+	}
+
+	err = ioutil.WriteFile(configFilePath, configData, 0644)
+	if err != nil {
 		return err
 	}
 
