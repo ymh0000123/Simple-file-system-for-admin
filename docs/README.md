@@ -10,13 +10,13 @@
 运行程序
 
 运行之后如下图
-<img src="./attachment/1.png"  />
+<img src="https://slink.ltd/raw.githubusercontent.com/ymh0000123/Simple-file-system-for-admin/main/docs/attachment/1.png"  />
 
 >默认访问地址是http://localhost:8080
 
 用浏览器打开http://localhost:8080
 
-<img src="./attachment/2.png"  />
+<img src=".https://slink.ltd/raw.githubusercontent.com/ymh0000123/Simple-file-system-for-admin/main/docs/attachment/2.png"  />
 
 打开之后如上图
 
