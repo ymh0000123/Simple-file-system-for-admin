@@ -10,6 +10,7 @@
 运行程序
 
 运行之后如下图
+
 <img src="https://slink.ltd/raw.githubusercontent.com/ymh0000123/Simple-file-system-for-admin/main/docs/attachment/1.png"  />
 
 >默认访问地址是http://localhost:8080
