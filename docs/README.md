@@ -16,7 +16,7 @@
 
 用浏览器打开http://localhost:8080
 
-<img src=".https://slink.ltd/raw.githubusercontent.com/ymh0000123/Simple-file-system-for-admin/main/docs/attachment/2.png"  />
+<img src="https://slink.ltd/raw.githubusercontent.com/ymh0000123/Simple-file-system-for-admin/main/docs/attachment/2.png"  />
 
 打开之后如上图
 
