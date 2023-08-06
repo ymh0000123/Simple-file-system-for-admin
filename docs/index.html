@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cn">
+
 <head>
   <meta charset="UTF-8">
   <title>Simple-File-System-Admin</title>
@@ -9,20 +10,44 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="shortcut icon" type="image/ico" href="favicon.ico">
 </head>
+
 <body>
+  <div id="app">加载中</div>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'Simple-File-System-Admin',
       repo: 'https://github.com/ymh0000123/Simple-file-system-for-admin',
       onlyCover: false,
-      coverpage: ['/', ],
+      coverpage: ['/',],
       loadNavbar: true,
       loadSidebar: true,
-      subMaxLevel: 2
+      logo: 'favicon.ico',
+      subMaxLevel: 2,
+      copyCode: {
+        buttonText: {
+          '/': '点击复制',
+          '/en/': 'Copy to clipboard'
+        },
+        errorText: {
+          '/': '错误',
+          '/en/': 'Error'
+        },
+        successText: {
+          '/': '复制',
+          '/en/': 'Copied'
+        }
+      }
     }
   </script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//unpkg.com/docsify@4"></script>
+  <!--插件-->
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 </body>
+
 </html>
