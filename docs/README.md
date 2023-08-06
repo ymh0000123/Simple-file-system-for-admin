@@ -1,8 +1,8 @@
-# 快速开始
+### 快速开始
 
 > Simple-File-System-Admin 小白也可以轻松使用与管理
 
-## 下载最新版
+#### 下载最新版
 前往[Releases](https://github.com/ymh0000123/Simple-file-system-for-admin/releases)下载最新版
 
 下载之后放到自己想放的位置

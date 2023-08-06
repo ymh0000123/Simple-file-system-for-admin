@@ -10,3 +10,9 @@
 打开之后界面如下图
 
 <img src="https://slink.ltd/raw.githubusercontent.com/ymh0000123/Simple-file-system-for-admin/main/docs/attachment/3.png"  />
+
+## 管理员面板管理功能
+
+管理员面板支持删除文件如下图
+
+<img src="https://slink.ltd/raw.githubusercontent.com/ymh0000123/Simple-file-system-for-admin/main/docs/attachment/4.png"  />
